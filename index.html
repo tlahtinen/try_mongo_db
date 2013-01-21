@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8"/>
 		<title>Score</title>
-		<meta name="description" content="Online scores"/>
+		<meta name="description" content="Testing mongodb, node.js and experss.js"/>
 		<meta name="author" content="Lahtinen Toni T" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	</head>
@@ -15,10 +15,10 @@
 			</header>
 			<nav>
 				<p>
-					<a href="/">Home</a>
+					<a href="#signup_form">Sign up</a>
 				</p>
 				<p>
-					<a href="/contact">Contact</a>
+					<a href="#participants">Participants</a>
 				</p>
 			</nav>
 
@@ -34,6 +34,13 @@
 					<input type="text" name="name">
 					<input type="submit" value="Sign up">
 				</form>
+				
+				<div id="participants">
+					Registered so far.
+					<div id="names" onclick="">
+						Click to get names.
+					</div>					
+				</div>
 			</div>
 
 			<footer>
