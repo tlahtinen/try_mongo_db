@@ -1,17 +1,19 @@
 var express = require('express'), 
-	path = require('path'), 
-	http = require('http'),
-	users = requires('./routes/signup.js');
+	users = require('./routes/signup.js');
 
 var app = express();
 
-app.configure(function () {
-	app.set('port', process.env.PORT || 8011);
+app.configure(function() {
+	/* 'default', 'short', 'tiny', 'dev' */
+	app.use(express.logger('dev'));
 	app.use(express.bodyParser());
 });
 
-/*
-app.get('/', users.findAll());
-app.post('/', users.add());
-*/
-app.listen(8001);
+app.get('/users', users.findAll);
+app.get('/users/:id', users.findById);
+app.post('/users', users.addUser);
+app.put('/users/:id', users.updateUser);
+app.delete('/users/:id', users.deleteUser);
+
+app.listen(8011);
+console.log('Listening on port 8011');
