@@ -27,16 +27,30 @@
 			<div id="content">
 				<form id="signup_form" action="" name="signup_form">
 					<label for="email">E-mail</label>
-					<input type="email" name="email" required autofocus>
+					<input id="email" type="email" required autofocus/>
 					<label for="password">Password</label>
-					<input type="password" name="password" required>
+					<input id="password" type="password" required/>
 					<label for="name">Name</label>
-					<input type="text" name="name">
-					<input type="submit" onclick="addUser()" value="Sign up">
+					<input id="name" type="text"/>
+					<input type="button" onclick="addUser()" value="Sign up"/>
+				</form>
+				
+				<form id="update">
+					<label for="update_id">_id</label>
+					<input id="update_id" type="text"/>
+					<label for="update_name">New name</label>
+					<input id="new_name" type="text"/>
+					<input type="button" onclick="updateUser()" value="Update"/>
+				</form>
+				
+				<form id="delete">
+					<label for="delete_id">_id</label>
+					<input id="delete_id" type="text"/>
+					<input type="button" onclick="deleteUser()" value="Delete"/>
 				</form>
 				
 				<div id="participants">
-					Registered so far.
+					Registered so far:
 					<div id="names" onclick="getAllUsers()">
 						Click to get names.
 					</div>					

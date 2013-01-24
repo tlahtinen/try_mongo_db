@@ -11,9 +11,8 @@ app.configure(function() {
 	app.use(express.static(path.join(__dirname, 'public')));
 });
 
-
 app.get('/users', users.findAll);
-app.get('/users/:id', users.findById);
+//app.get('/users/:id', users.findById);
 app.post('/users', users.addUser);
 app.put('/users/:id', users.updateUser);
 app.delete('/users/:id', users.deleteUser);
