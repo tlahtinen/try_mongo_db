@@ -6,6 +6,7 @@
 		<meta name="description" content="Testing mongodb, node.js and experss.js"/>
 		<meta name="author" content="Lahtinen Toni T" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="css/style.css" rel="stylesheet">
 		<script src="lib/jquery-1.9.0.min.js"></script>
 		<script src="js/client.js"></script>
 	</head>
@@ -34,7 +35,7 @@
 					<input id="name" type="text"/>
 					<input type="button" onclick="addUser()" value="Sign up"/>
 				</form>
-				
+
 				<form id="update">
 					<label for="update_id">_id</label>
 					<input id="update_id" type="text"/>
@@ -42,18 +43,18 @@
 					<input id="new_name" type="text"/>
 					<input type="button" onclick="updateUser()" value="Update"/>
 				</form>
-				
+
 				<form id="delete">
 					<label for="delete_id">_id</label>
 					<input id="delete_id" type="text"/>
 					<input type="button" onclick="deleteUser()" value="Delete"/>
 				</form>
-				
+
 				<div id="participants">
 					Registered so far:
 					<div id="names" onclick="getAllUsers()">
 						Click to get names.
-					</div>					
+					</div>
 				</div>
 			</div>
 

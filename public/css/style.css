@@ -1,0 +1,8 @@
+html, body {
+	min-height: 100%;
+	font-size: 100%;
+	min-width: 15em;
+	max-width: 33.75em;
+	margin: auto;
+	position: relative;
+}
